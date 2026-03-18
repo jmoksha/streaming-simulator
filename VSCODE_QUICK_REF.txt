@@ -1,0 +1,383 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                        📺 VS CODE QUICK REFERENCE 📺                        ║
+║                                                                              ║
+║                     Streaming Platform Engagement Simulator                ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+📂 ALL FILES LOCATION
+═══════════════════════════════════════════════════════════════════════════════
+
+📍 /mnt/user-data/outputs/streaming_simulator/
+
+
+🎯 OPEN PROJECT IN VS CODE
+═══════════════════════════════════════════════════════════════════════════════
+
+Method 1: GUI (Easiest)
+  File → Open Folder
+  Navigate to: /mnt/user-data/outputs/streaming_simulator/
+  Click "Select Folder"
+
+Method 2: Command Line
+  cd /mnt/user-data/outputs/streaming_simulator
+  code .
+
+Method 3: Direct Command
+  code /mnt/user-data/outputs/streaming_simulator
+
+
+📁 COMPLETE FILE STRUCTURE
+═══════════════════════════════════════════════════════════════════════════════
+
+streaming_simulator/                    ← ROOT (Open this)
+│
+├── 📂 src/                            CORE PYTHON MODULES
+│   ├── markov_model.py               (413 lines - Markov chain)
+│   ├── simulation.py                 (539 lines - Simulations)
+│   ├── visualization.py              (649 lines - Plots)
+│   └── __init__.py
+│
+├── 📂 app/                           STREAMLIT DASHBOARD
+│   └── streamlit_dashboard.py        (738 lines - Main app)
+│
+├── 📂 notebooks/                     JUPYTER ANALYSIS
+│   └── analysis.ipynb                (200+ cells)
+│
+├── 📂 data/                          DATA & CONFIG
+│   └── transition_matrix.csv         (6x6 matrix)
+│
+├── 📄 START_HERE.md                  ⭐ READ FIRST
+├── 📄 QUICKSTART.md                  5-minute setup
+├── 📄 README.md                      Complete guide
+├── 📄 VS_CODE_SETUP.md              Detailed VS Code guide
+├── 📄 MANIFEST.md                    File descriptions
+├── 📄 ARCHITECTURE.md                System design
+├── 📄 PROJECT_SUMMARY.md             Features list
+├── 📄 DELIVERY.md                    Checklist
+│
+├── 📄 test_project.py                Test suite
+├── 📄 requirements.txt               Dependencies
+└── 📄 .gitignore                     Git config
+
+
+🔧 PYTHON FILES TO EDIT
+═══════════════════════════════════════════════════════════════════════════════
+
+CORE MODULES (src/ folder):
+  ✓ markov_model.py      - Markov chain core (413 lines)
+  ✓ simulation.py        - Monte Carlo & Poisson (539 lines)
+  ✓ visualization.py     - All plots & charts (649 lines)
+  ✓ __init__.py          - Package setup
+
+DASHBOARD:
+  ✓ app/streamlit_dashboard.py - Main web app (738 lines)
+
+TESTS:
+  ✓ test_project.py      - Test suite (333 lines)
+
+NOTEBOOKS:
+  ✓ notebooks/analysis.ipynb - Jupyter analysis (200+ cells)
+
+
+▶️ TERMINAL COMMANDS IN VS CODE
+═══════════════════════════════════════════════════════════════════════════════
+
+Open Terminal:  Ctrl+` (backtick)
+
+Install Dependencies:
+  pip install -r requirements.txt
+
+Run Streamlit Dashboard:
+  streamlit run app/streamlit_dashboard.py
+  → Opens in browser at http://localhost:8501
+
+Run Tests:
+  python test_project.py
+
+Run Jupyter Notebook:
+  jupyter notebook notebooks/analysis.ipynb
+
+Run Any Python File:
+  python filename.py
+
+Run Python Script Selection:
+  Select code → Shift+Enter (with Python extension)
+
+
+📝 DOCUMENTATION FILES (Read in VS Code)
+═══════════════════════════════════════════════════════════════════════════════
+
+Click file and press Ctrl+Shift+V to preview markdown:
+
+⭐ START_HERE.md           - Project overview (START HERE!)
+QUICKSTART.md              - 5-minute setup guide
+README.md                  - Complete technical documentation
+VS_CODE_SETUP.md           - Detailed VS Code instructions
+MANIFEST.md                - Complete file descriptions
+ARCHITECTURE.md            - System design & patterns
+PROJECT_SUMMARY.md         - Features & highlights
+DELIVERY.md                - Deliverables checklist
+
+
+📊 PYTHON CLASS & METHOD REFERENCE
+═══════════════════════════════════════════════════════════════════════════════
+
+src/markov_model.py:
+  ├── MarkovChainModel (Main class)
+  │   ├── __init__()
+  │   ├── validate_matrix()
+  │   ├── compute_steady_state()
+  │   ├── check_ergodicity()
+  │   ├── simulate_user_trajectory()
+  │   └── get_transition_dataframe()
+  └── load_transition_matrix_from_csv()
+
+src/simulation.py:
+  ├── SimulationResult (Data container)
+  │   ├── get_dataframe()
+  │   ├── get_metrics()
+  │   └── get_state_proportions()
+  ├── SimulationEngine
+  │   ├── run_simulation()
+  │   └── run_sensitivity_analysis()
+  ├── PoissonArrivalProcess
+  │   ├── generate_arrivals()
+  │   └── cumulative_arrivals()
+  └── EnhancedSimulationEngine
+      └── run_simulation_with_arrivals()
+
+src/visualization.py:
+  ├── MarkovChainVisualizer
+  │   ├── plot_transition_matrix()
+  │   ├── plot_transition_network()
+  │   └── plot_steady_state_distribution()
+  ├── SimulationVisualizer
+  │   ├── plot_state_distribution_over_time()
+  │   ├── plot_state_proportions_over_time()
+  │   ├── plot_funnel_chart()
+  │   └── plot_conversion_metrics()
+  └── create_interactive_dashboard()
+
+
+⌨️ USEFUL VS CODE SHORTCUTS
+═══════════════════════════════════════════════════════════════════════════════
+
+Navigation:
+  Ctrl+P           Go to file
+  Ctrl+Shift+F     Search in project
+  Ctrl+`           Open terminal
+  Ctrl+K Ctrl+W    Close editor
+
+Editing:
+  Ctrl+/           Toggle comment
+  Shift+Alt+F      Format document
+  Ctrl+Shift+O     Go to symbol
+  Ctrl+D           Select next match
+
+Running:
+  Ctrl+Shift+D     Run Python file
+  F5               Start debugging
+  Shift+Enter      Run Python selection
+
+Preview:
+  Ctrl+Shift+V     Preview markdown
+  Ctrl+K V         Preview to side
+
+
+🚀 TYPICAL VS CODE WORKFLOW
+═══════════════════════════════════════════════════════════════════════════════
+
+Step 1: Open Project
+  code /mnt/user-data/outputs/streaming_simulator
+
+Step 2: Install Dependencies (Terminal)
+  pip install -r requirements.txt
+
+Step 3: Read Documentation
+  Open START_HERE.md → Ctrl+Shift+V for preview
+
+Step 4: Explore Code
+  Open src/markov_model.py
+  Read docstrings (Hover over functions)
+
+Step 5: Run Dashboard (Terminal)
+  streamlit run app/streamlit_dashboard.py
+
+Step 6: Experiment
+  Modify parameters in dashboard
+
+Step 7: Check Tests (Terminal)
+  python test_project.py
+
+Step 8: Deep Learning
+  Open notebooks/analysis.ipynb
+  Run cells to understand
+
+Step 9: Customize Code
+  Edit files in src/
+  Save and run tests
+
+
+📦 INSTALLING DEPENDENCIES
+═══════════════════════════════════════════════════════════════════════════════
+
+What needs to be installed:
+  ✓ numpy          Scientific computing
+  ✓ pandas         Data structures
+  ✓ matplotlib     Static plots
+  ✓ seaborn        Enhanced plots
+  ✓ plotly         Interactive plots
+  ✓ streamlit      Dashboard
+  ✓ networkx       Graph visualization
+  ✓ jupyter        Notebooks
+  ✓ scipy          Scientific functions
+
+Install all at once:
+  pip install -r requirements.txt
+
+Check installation:
+  python -c "import numpy, pandas, streamlit; print('✓ All good')"
+
+
+🔍 FILE EDITING QUICK REFERENCE
+═══════════════════════════════════════════════════════════════════════════════
+
+To Edit Transition Matrix:
+  1. Open: data/transition_matrix.csv
+  2. Edit the 6x6 values
+  3. Save: Ctrl+S
+  4. Re-run dashboard to see changes
+
+To Add Custom Code:
+  1. Open relevant file in src/
+  2. Add function or modify existing
+  3. Save: Ctrl+S
+  4. Test: python test_project.py
+
+To Modify Dashboard:
+  1. Open: app/streamlit_dashboard.py
+  2. Edit Streamlit components
+  3. Save: Ctrl+S
+  4. Dashboard auto-reloads in browser
+
+To Create Visualization:
+  1. Open: src/visualization.py
+  2. Add method to visualizer class
+  3. Use matplotlib/plotly
+  4. Test in notebook
+
+
+💡 VS CODE EXTENSIONS (Recommended)
+═══════════════════════════════════════════════════════════════════════════════
+
+Essential:
+  Python (Microsoft)         - Code intelligence, debugging
+  Jupyter (Microsoft)        - Notebook support
+
+Recommended:
+  Pylance                    - Advanced Python support
+  Python Docstring Generator - Auto docstrings
+  Better Comments            - Color-coded comments
+
+Install:
+  Click Extensions icon (left sidebar)
+  Search for extension name
+  Click Install
+
+
+✅ VERIFY EVERYTHING IS WORKING
+═══════════════════════════════════════════════════════════════════════════════
+
+In VS Code Terminal:
+
+1. Check Python installation:
+   python --version
+
+2. Check pip:
+   pip --version
+
+3. Install all dependencies:
+   pip install -r requirements.txt
+
+4. Verify imports:
+   python -c "import numpy, pandas, streamlit; print('✓ Ready to go!')"
+
+5. Run tests to verify everything:
+   python test_project.py
+
+6. Start dashboard:
+   streamlit run app/streamlit_dashboard.py
+
+
+📊 PROJECT STATISTICS
+═══════════════════════════════════════════════════════════════════════════════
+
+Total Files:         18
+Python Files:        6
+Documentation:       8
+Notebooks:          1
+Data Files:         1
+Config:             2
+
+Code Lines:         2,048
+Documentation:      2,000+
+Jupyter Cells:      200+
+
+Classes:            7
+Functions:          50+
+Tests:              6
+Visualizations:     12+
+
+
+🎯 WHAT YOU CAN DO
+═══════════════════════════════════════════════════════════════════════════════
+
+✓ Run interactive dashboard
+✓ Analyze user behavior
+✓ Modify transition matrix
+✓ Run simulations
+✓ View visualizations
+✓ Read Jupyter notebook
+✓ Run test suite
+✓ Modify code
+✓ Create custom features
+✓ Submit for course
+✓ Add to GitHub
+✓ Use in interviews
+
+
+📍 QUICK NAVIGATION
+═══════════════════════════════════════════════════════════════════════════════
+
+In VS Code:
+  Ctrl+P → Type filename → Enter
+
+Quick Files to Open:
+  START_HERE.md         Project overview
+  README.md             Technical guide
+  src/markov_model.py   Core logic
+  app/streamlit_dashboard.py   Dashboard
+  notebooks/analysis.ipynb   Analysis
+
+
+🎉 YOU'RE ALL SET!
+═══════════════════════════════════════════════════════════════════════════════
+
+Location:    /mnt/user-data/outputs/streaming_simulator/
+
+Quick Start:
+  1. Open folder in VS Code
+  2. Run: pip install -r requirements.txt
+  3. Run: streamlit run app/streamlit_dashboard.py
+  4. Explore and modify!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+For detailed information, see VS_CODE_SETUP.md in the project folder.
+
+Happy coding! 🚀
+
